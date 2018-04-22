@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <link rel='stylesheet' href='stylesheets/chat.css' />
+    
+  </head>
+  <body>
+
+    <% if(!user){%>
+      
+      <div id="nouser" class="alert">
+        <div class="alertcon">
+          <h1>Opps! <hr></h1>
+          <p class="issue">You need to sign in to see this page.</p><br>
+          <a href="/" class="btn">Sign in</a>
+        </div>
+      </div>
+
+    <% }else{ %>
+    <div id="con">
+      <header>
+        <h1 class="hidden">Just Ask</h1>
+        <div id="mainheader">
+          <img src="images/logo-mobile.svg" id="logo" alt="Mobile Logo">
+          <p id="user">Hello <%= user.username %></p>
+          <a href="/logout" id="logoutbtn"><img src="images/logout.svg" id="logout" alt="Logo"></a>
+        </div>
+        <div id="menu">
+        </div>
+      </header>
+
+      <section id="student">
+        <h2 class="hidden">Questions</h2>
+        <div id="studentoutput" class="output">
+        </div>
+
+        <div id="input">
+          <!--  <p id="empty" class="hidden">Input field must not be empty</p> -->
+          <input id="handle" type="text" placeholder="handle" value="<%= user.username %>" hidden>
+          <input type="text" name="question" placeholder="Type question here..." id="message">
+          <img src="images/send.svg" id="send" alt="Send Message">
+        </div>
+      </section>
+
+      <!-- alerts -->
+      <div id="unavailable" class="alert">
+        <div class="alertcon">
+          <h1>Opps! <hr></h1>
+          <p class="issue">This class is currently unavailable.</p><br>
+          <p>Please wait until your teacher has activated this class before you try to send questions.<br><br>Thank you.</p>
+          <a href="/logout" class="btn">Logout</a>
+        </div>
+      </div>
+
+      <div id="fullbin" class="alert">
+        <div class="alertcon">
+          <h1>Opps! <hr></h1>
+          <p class="issue">The question bin is currently full.</p><br>
+          <p>Please wait until your teacher has answered a few questions before you try to send more.<br><br>Thank you.</p>
+          <a href="/logout" class="btn">Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <% } %>
+
+    <script type="text/javascript" src="/javascripts/socket.js"></script>
+    <script type="text/javascript" src="/javascripts/student.js"></script>
+  </body>
+</html>

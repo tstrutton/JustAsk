@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= title %></title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/auth.css' />
+    
+    
+  </head>
+  <body>
+
+      <div id="con">
+        <div id="logincon">
+          <div>
+            <h1 id="login">Sign in <hr></h1>
+            <h1 id="register">Register <hr></h1>
+          </div>
+
+          <form id="loginform" action="/login" method="post" class="active" >
+            <input type="text" name="username" id="username1" placeholder="Enter your email"><br>
+            <input type="password" name="password" id="password1" placeholder="Enter your password">
+            <button id="loginbtn" class="btn" type="submit">Sign in</button>
+          </form>
+
+          <form id="registerform" class="hidden" action="/register" method="post">
+            <p>*Please use your school email</p>
+            <input type="text" name="username" id="username" placeholder="Enter your email"><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password">
+            <!-- <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confrim your password"> -->
+            <input type="text" name="identifier" value="" id="identifier" class="hidden">
+            <!-- <label for="role">Select a Role</label><br> -->
+            <input name="role" id="role" value="student" class="hidden">
+            <button id="registerbtn" class="btn" type="submit">Register</button>
+          </form>
+
+        </div>
+      </div>
+
+  
+    <script type="text/javascript">
+      var login = document.querySelector('#login');
+      var register = document.querySelector('#register');
+      var loginline = document.querySelector('#login hr');
+      var registerline = document.querySelector('#register hr');
+      var loginform = document.querySelector('#loginform');
+      var registerform = document.querySelector('#registerform');
+
+      login.addEventListener('click', toggleAuth, false);
+      register.addEventListener('click', toggleAuth, false);
+
+
+      function toggleAuth(){
+        if(this.id != 'login'){
+          registerline.style.width = '100%';
+          loginline.style.width = '0';
+          loginform.style.display='none';
+          registerform.style.display = 'block';
+        }else{
+          registerline.style.width = '0';
+          loginline.style.width = '100%';
+          loginform.style.display='block';
+          registerform.style.display = 'none';
+        }
+      }
+
+      var random = Math.random().toString(30).substring(2);
+      var identifier = document.querySelector('#identifier');
+      identifier.setAttribute('value', random);
+      console.log(identifier.value);
+      console.log(random);
+    </script>
+
+<script type="text/javascript" src="/javascripts/socket.js"></script>
+  </body>
+</html>

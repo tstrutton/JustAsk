@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='stylesheets/chat.css' />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    
+  </head>
+  <body>
+
+    <% if(!user){%>
+
+      <div id="nouser" class="alert">
+        <div class="alertcon">
+          <h1>Opps! <hr></h1>
+          <p class="issue">You need to sign in to see this page.</p><br>
+          <a href="/" class="btn">Sign in</a>
+        </div>
+      </div>
+
+    <% }else{ %>
+    <div id="con">
+      <header>
+        <h1 class="hidden">Just Ask</h1>
+
+        <div id="mainheader">
+          <img src="images/logo-mobile.svg" id="logo" alt="Mobile Logo">
+          <p id="user">Hello <%= user.username %></p>
+          <a href="/logout" id="logoutbtn"><img src="images/logout.svg" id="logout" alt="Logo"></a>
+        </div>
+
+        <div id="menu"> 
+
+          <div id="activate">
+            <div id="activateCircle">
+              <div id="activateActive">
+              </div>
+            </div>
+            <p class="title">Activate Class</p>
+          </div>
+
+          <div id="clearbin">
+            <div id="binNum">
+              <p id="bin">0</p>
+            </div>
+            <p class="title">Clear Bin</p>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <h1 class="hidden">Questions</h1>
+          <div id="profoutput" class="output">
+          </div>
+
+          <div id="input">
+            <input id="handle" type="text" placeholder="handle" hidden value="<%= user.username %>">
+            <input id="message" type="text" placeholder="message" hidden>
+            <button id="send" hidden>Send</button>
+          </div>
+      </section>
+    </div>
+
+    <!-- Alerts -->
+
+      <div id="confirm-activate" class="alert">
+      <div class="alertcon">
+        <h1>Are you sure? <hr></h1>
+        <p>Are you sure you want to activate the class MMED-1006?</p>
+        <div class="buttons" id="activatebuttons">
+          <button class="btn" id="a-cancel">Cancel</button>
+          <button class="btn" id="a-continue">Continue</button>
+        </div>
+      </div>
+    </div>
+    <div id="confirm-clearbin" class="alert">
+      <div class="alertcon">
+        <h1>Are you sure? <hr></h1>
+        <p>Are you sure you want to clear the bin?</p>
+        <div class="buttons" id="clearbuttons">
+          <button class="btn" id="c-cancel">Cancel</button>
+          <button class="btn" id="c-continue">Continue</button>
+        </div>
+      </div>
+    </div>
+    <% } %>
+
+    <script type="text/javascript" src="/javascripts/socket.js"></script>
+    <script type="text/javascript" src="/javascripts/prof.js"></script>
+  </body>
+</html>

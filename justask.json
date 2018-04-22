@@ -1,0 +1,41 @@
+{
+"justask":
+	{
+		"students":[
+			{
+				"email":"t_strutton@fanshaweonline.ca",
+				"password":"hashedpassword",
+				"identifier":"35d4v6s1fd35dv4"
+			}
+		],
+		"professors": [
+			{
+				"email":"rhaaf@fanshaweonline.ca",
+				"password":"hashedpassword",
+				"currentclass": "MMED-6004",
+				"myclasses":[
+					{
+						"code": "MMED-6004",
+						"active":true,
+						"questions":[
+							{
+								"question" : "what is html?",
+								"answered": false,
+								"sender": "identifier",
+								"date":"now"
+							}
+						]
+					}
+				]
+			}
+		],
+		"classes":[
+			"MMED-6004"
+		]
+	}
+}
+
+//set up for single prof and classes
+//prof selects class, presses activate
+//students only allowed to send questions to that prof when that class is active
+//students can chose a class from a list of active classes (for the experiment there will only be one)

@@ -1,0 +1,27 @@
+<svg id="activate" xmlns="http://www.w3.org/2000/svg" viewBox="5246 6293 44.667 40">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #f8b26a;
+        stroke-width: 4px;
+      }
+
+      .cls-2 {
+        fill: #849b87;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="activate-circle" class="cls-1" transform="translate(5246 6293)">
+    <rect class="cls-3" width="40" height="40" rx="20"/>
+    <rect class="cls-4" x="2" y="2" width="36" height="36" rx="18"/>
+  </g>
+  <path id="Checkmark" class="cls-2" d="M12.683,120.941h0a1.436,1.436,0,0,1-1.013-.423L.416,109.187a1.432,1.432,0,1,1,2.031-2.02L12.685,117.48,33.221,96.945a1.432,1.432,0,0,1,2.026,2.026L13.7,120.522A1.433,1.433,0,0,1,12.683,120.941Z" transform="translate(5255 6199.992)"/>
+</svg>
