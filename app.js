@@ -11,10 +11,9 @@ var User = require('./models/User');
 var socket = require('socket.io');
 var index = require('./routes/index');
 var users = require('./routes/users');
-var cors = require('cors');
 
 var app = express();
-app.use(cors())
+
 //connect to mongodb
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/justaskdb');
@@ -131,7 +130,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error page');
+  res.render('error');
 });
 
 
