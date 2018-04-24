@@ -1,41 +1,28 @@
-{
-"justask":
-	{
-		"students":[
-			{
-				"email":"t_strutton@fanshaweonline.ca",
-				"password":"hashedpassword",
-				"identifier":"35d4v6s1fd35dv4"
-			}
-		],
-		"professors": [
-			{
-				"email":"rhaaf@fanshaweonline.ca",
-				"password":"hashedpassword",
-				"currentclass": "MMED-6004",
-				"myclasses":[
-					{
-						"code": "MMED-6004",
-						"active":true,
-						"questions":[
-							{
-								"question" : "what is html?",
-								"answered": false,
-								"sender": "identifier",
-								"date":"now"
-							}
-						]
-					}
-				]
-			}
-		],
-		"classes":[
-			"MMED-6004"
-		]
+users
+[
+	{ 
+		"_id" : ObjectId("5ab839a7d460a82f70e748ea"), 
+		"username" : "admin", 
+		"role" : "professor", 
+		"currentclass" : "", 
+		"myclasses" : [ ], 
+		"hash" : "52ec3dc5b308a425978582a35523a44f3fb8bb3c345c59723ad345390ed2b0ff182dc3564c30008516cfccd1028abb2e85eba2169da55db1dd33b9a82c980c288c5c6eb3f372b53db979b65d049220c973a05e35c22e06fc8dced993aefe6ac51dbc183ea20e1fbe43c8796a4121448ab7e5d9298b729d7bb01900ddd790a80f390a1e24aa576c1fc3e3f74a77528e4989b7ceb9d5c60570fc9430373d766e3c69687cd3f2a7a6df50de0f3d62d7feb29cb8fd923434f4702fb3c921e8a337e402de8a35f40cd2f3032e0dcdb903c53ada57752e319411332a075ea2bac00ef9b9d6cd377ddde8c9311b3918f4dc3f2f494db02614e2b9fa38b3f578ef76d1f6a70eec9638759c0e8aad8afc2dc9c4fb460acfa97d85d434a5ccb12cc0c7b6b4327d7b0ea735d071c3a0b2549642fac8527d07550bbd2173abe4453c24821a76ef45071c3fd62b428e87416b7b87002330806d6155f84ca6ea91dd7a07bd0ce1967024e1f51decb18c99e80eea670e2d1d05378faa4555325cdeebb77eb2dc5fe1b32b68d673549ce8e5c88b0523e8cc8c326c0f7ca275ae23847519cd452c884bb5f6cb2a16d997f63f7712cf957b883ae723eb837102f613a03f266a54108622f2fa04ffcb1be93b86f08a8afcf7781491b5ffc4b008dde0529e8d056aeec35f9cd242eb7f4df30bc44371323f34737225db816f1758e018580e35891c2953", 
+		"salt" : "f81f70f2a6233445b560afadbce6612ca4b543a39b99271fdc670e624744719e", "__v" : 0 
+	},
+	{ 
+		"_id" : ObjectId("5ab839b8d460a82f70e748eb"), 
+		"username" : "taylor", 
+		"role" : "student", 
+		"identifier" : "ake11npmreh", 
+		"hash" : "0703c6cc602f57a2e588e85fd9ae94916991956e059e3ad7bb49d174dda47078cdb114c47e3e9184253521d2b71bccb69db3f1693664dbba0e069d0823450dab776afe4d4c1651bd955d69fa0657ddcdb8e09d9c0c55079a8860222cc9fe0803dda8f3ce1415e6f9a9bc7d47cc1deb28d2c4f1263899286dca0a6fad4c09e15005f34e4bff3ac66fb22ffc8e041c4b67f3d1930a36e1350a8411a3e7f5796c02e417d16a023271b8dffa75cfd445a5d57f4f71b76931a9718ed824e0a9ce8831ba753ff0152b08838d92968ed3eed3001f3e860ca339eb931e4dfc80202cbb96818f5d841b0abd9cd1c0843f44b190410f8652cda81378f6d399a978c973aee84dbb2c88df7320509bdb134f04bdba7351bea09dc96f9fe8c159a3a2d097539e9cc27a4bd22f493f7aff23151d168fca2426fb9292e45eb123e24eb8adcf58ba5e1bb38bca1faa7e4dfa351563e5b75a57317b6d18097e69bb4551ac852e3267aa9643f0b4798ce7ceec8e30a735d4d7b35315477d74735db74a82a91b4a5760a12c26b4119c6ab7428f2d09c70b1ae57475da3b3b0cc623296f7a41a3def12f5ced296d66d6429f6c75691041433c365eabad7f8bb6569ccf49ad4bfca9572a2e1234350378e76057f9d97c580d36818b2408956e7e45fe41da41ceeafb72f5cd017192bf2c1bb5480c1cf1ed5da779288993a877193e89257ee1ed83c75552", 
+		"salt" : "7f3e0dd2112a6990a8be4dde9c1af637a6a5afcc556c0b1dac1d406e5ff7d37f", "__v" : 0 
+	},
+	{ 
+		"_id" : ObjectId("5accf838bc998a70f446ee23"), 
+		"username" : "bob", 
+		"role" : "student", 
+		"identifier" : "4l3ph4ma7lq",
+		"hash" : "ac4ca1dd798557a1c1adebdd7221691eb4fa71521e82564a4d8dc5d7f4bf976beb70d7938441ab9fba15833ecaf91311d45e219acb826ebafb6dc37b1dc578e53357bd999d9310ac7f3dd346d3439e6f0ad7d06769e9c7aaa19a8e7a97671453687a200892f70d3e3b6d50396847c14f9cf86c29ac0eecce7da5e308ed374929adb9c22f1e31b651dcec697483ba072f9d7b9ec226a21d40423e999cd0f7502e2e1dbc3b4b1304bc6998b6efeba0f7ec79b4d695ff074588f00c4f4ef7cf7e70f85c2020bfe767fe364eda42eb14cd8ff3b2e884a621015004bed163301135fd521a1540e34b52803dbedb125627ac3070e9afc6ce1dab6678ca53a4edbff8654c00425591d06034ff7207eb7fe27efd032fa80a2dac66a825f349fd719d10bb5d614ca9d0d43d1f1e70bf245a2f22eefefbb7faea70abaaa4ee263c5807fce5a86b3870c666313ccc9051ab15f4b6264e5bad1bd83fcf274b782530872c3effb330ac609d545625c0b51e987f6780f06ef0a980c6fb06eb8d68ef6edfa448e1f117b4d16b97250e383a296833ba52c3744736947bc2f95848dd86c2b5dc5a8391314eeb24894056c02e6fd8b31b67e82453b0218a1e2fc3bf738ee52f373547a214fc11070333ebd4566f6381dfbd656d04a0f5e45795f6791795d21de2e59eab59c433d6b7d4df4eb09a72a5040e279d58a77c0c3f615c0dffb563457c48fd", 
+		"salt" : "2b89dfd0dcf3b30bc85b8e1ad4146e39a6b6db5dfce4954e4a6c8912675ee9e7", "__v" : 0 
 	}
-}
-
-//set up for single prof and classes
-//prof selects class, presses activate
-//students only allowed to send questions to that prof when that class is active
-//students can chose a class from a list of active classes (for the experiment there will only be one)
+]
